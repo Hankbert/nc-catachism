@@ -7,7 +7,7 @@
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         
-        <style type"text/css">
+        <style type="text/css">
             
             body {
                 
@@ -83,7 +83,7 @@
             
             #page-container {
                 
-                width:960px;
+                width:1200px;
                 margin:0 auto;
                 background-color: ;
                 padding-top:20px;
@@ -93,37 +93,122 @@
             
             .row-container {
                 
-                width:960px;
+                width:1200px;
                 margin:0 auto;
                 background-color: ;
                 height:450px;
                 
             }
             
-            .outer-square {
+            .outer-square-random {
                 
                 height:320px;
-                width:317px;
+                width:800px;
                 float:left;
                 
             } 
             
-            .inner-square {
+            #inner-square-random {
                 
                 border: 1px gray solid;
                 margin-right:5px;
                 border-radius: 1%;
                 float:left;
                 padding-bottom: 15px;
-                width:300px;
+                width:785px;
                 height:420px;
-                overflow-y: scroll;
+                overflow-y: auto;
+                            
+            }
+            
+            .random-button {
+                
+                margin:37px 30px 30px 25px;
+                font-size:20px;
+                padding: 7px 10px;
+                border-radius:1%;
+                background-color: lightgray;
+                width:315px;
+                border:1px solid gray;
+                
+            }
+            
+            .random-button:hover {
+                
+                background-color: #BB1919;
+                border:1px solid #A91717;
+                color:white;
+            }
+            
+            .triangledown {
+                
+                margin-top: -11px;
+                margin-left: 20px;
+                border-right: 2px solid #A91717; 
+                border-bottom: 2px solid #A91717;
+                width: 15px; height: 15px;
+                transform: rotate(-315deg);
+                margin-bottom: 25px;
+                
+            }
+            
+            .triangledown:hover {
+                
+                border-right: 2px solid #c16060; 
+                border-bottom: 2px solid #c16060;
+                
+            }
+       
+            .triangleup {
+                
+                margin-top: 0px;
+                border-right: 2px solid #A91717; 
+                border-bottom: 2px solid #A91717;
+                width: 15px; height: 15px;
+                transform: rotate(-135deg);
+                margin-bottom: 25px;
+            }
+            
+            .outer-square {
+                
+                margin-right:12px;
+                border-radius:1%;
+                width:385px;
+                height:435px;
+                float:left;
+                border: 1px gray solid;
+                
+                
+            } 
+            
+            .inner-square {
+                
+                width:385px;
+                height:435px;
+                overflow-y: auto;
+               
                             
             }
             
             .number {
              
-                padding-left:10px;
+                font-weight:bold;
+                font-size:20px;
+                border-bottom: 2px solid #A91717;
+                width:75px;
+                color:gray;
+                padding-left: 10px;
+                
+            }
+            
+           #assessment {
+             
+                font-weight:bold;
+                font-size:20px;
+                border-bottom: 2px solid #A91717;
+                width:175px;
+                color:gray;
+                padding-left: 10px;
                 
             }
                 
@@ -133,7 +218,7 @@
                 font-size: 32px;
                 padding: 0 15px 0px 15px;
                 font-weight:bold;
-                
+                               
                 
             }
             
@@ -143,6 +228,7 @@
                 font-size: 30px;
                 padding: 0 15px 0px 15px;
                 display: none;
+                color: #A91717;
             
             }
             
@@ -152,24 +238,12 @@
                 font-size: 30px;
                 padding: 0px 15px 0px 15px;
                 padding-left: 15px;
-                            
-            }
-            
-            
-            h2 {
-                
-                font-weight:bold;
-                font-size:20px;
-                border-bottom: 2px solid #A91717;
-                width:75px;
-                color:gray;
-                padding-left: 5px;
-                
+        
             }
             
             a {
                 
-                color:#A91717;
+                color:gray;
                 font-size:30px;
                 text-decoration:none;
             }
@@ -235,15 +309,15 @@
             
             <div class="row-container">
             
-                <a name="q1"></a>
-                
-                <div class="outer-square">
+                <div class="outer-square-random">
                     
-                    <div class="inner-square">
+                    <div id="inner-square-random">
                                             
                         <h2 class="number">Q1</h2>
                         
-                        <p class="question">What is our only hope in life and death?</p>                    
+                        <p class="question">What is our only hope in life and death?</p> 
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">That we are not our own but belong to God.</p>
                     
@@ -257,13 +331,57 @@
             
                     <div class="inner-square">
                     
+                        <h2 id="assessment">Self Assessment</h2>
+                        
+                        <div id="random-all" class="random-button">Any Question</div>
+                        
+                        <div id="random-part-1" class="random-button">God, creation and fall, law</div>
+                        
+                        <div id="random-part-2" class="random-button">Christ, redemption, grace</div>
+                        
+                        <div id="random-part-3" class="random-button">Spirit, restoration, growing in grace</div>
+                    
+                    </div>
+            
+                </div>
+                
+            </div>
+            
+            <div class="row-container">
+            
+                <a name="q1"></a>
+                
+                <div class="outer-square">
+                    
+                    <div class="inner-square" id="1">
+                                            
+                        <h2 class="number">Q1</h2>
+                        
+                        <p class="question">What is our only hope in life and death?</p> 
+                        
+                        <div class="triangledown"></div>
+                        
+                        <p class="answer">That we are not our own but belong to God.</p>
+                    
+                        <a class="verse" href="https://www.biblegateway.com/passage/?search=romans+14%3A7-8&version=NIV">Romans 14:7-8</a>
+                        
+                    </div>              
+                     
+                </div>
+                
+                <div class="outer-square">
+            
+                    <div class="inner-square" id="2">
+                    
                         <h2 class="number">Q2</h2>
                         
                         <p class="question">What is God?</p>
                         
+                        <div class="triangledown"></div>
+                        
                         <p class="answer">God is the creator of everyone and everything.</p>
                         
-                        <a class="verse" href="" target="_blank">Psalm 8-10 </a><span class="verse">and </span ><a class="verse" href="">15</a>
+                        <a class="verse" href="https://www.biblegateway.com/passage/?search=psalm+8-10&version=NIV" target="_blank">Psalm 8-10</a><span class="verse">and</span ><a class="verse" href="https://www.biblegateway.com/passage/?search=psalm+15&version=NIV">15</a>
                     
                     </div>
             
@@ -271,15 +389,17 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="3">
                     
                         <h2 class="number">Q3</h2>
                         
                         <p class="question">How many persons are there in God?</p>
                         
+                        <div class="triangledown"></div>
+                        
                         <p class="answer">There are three persons in one God: the Father, the Son, and the Holy Spirit.</p>
                         
-                        <a class="verse" href="" target="_blank">2 Corinthians 13:14</a>
+                        <a class="verse" href="https://www.biblegateway.com/passage/?search=2+corinthians+13%3A14&version=NIV" target="_blank">2 Corinthians 13:14</a>
                     
                     </div>
             
@@ -293,11 +413,13 @@
             
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="4">
                         
                         <h2 class="number">Q4</h2>
                         
                         <p class="question">How and why did God create us?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">God created us male and femaile in his own image to glorify him.</p>
                         
@@ -309,11 +431,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="5">
                     
                         <h2 class="number">Q5</h2>
                         
                         <p class="question">What else did God create?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">God created all things, and all his creation was very good.</p>
                         
@@ -325,11 +449,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="6">
                     
                         <h2 class="number">Q6</h2>
                         
                         <p class="question">How can we glorify God?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">By loving him and by obeying his commands and law.</p>
                         
@@ -347,11 +473,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">        
+                    <div class="inner-square" id="7">        
                         
                         <h2 class="number">Q7</h2>
                         
                         <p class="question">What does the law of God require?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">That we love God with all our heart, soul, mind, and strength; and love our neighbour as ourselves.</p>
                         
@@ -363,11 +491,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="8">
                     
                         <h2 class="number">Q8</h2>
                         
                         <p class="question">What is the law of God stated in the Ten Commandments?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">You shall have no other gods before me. You shall not make for yourself an idol. You shall not misuse the name of the LORD your God. Remember the Sabbath day by keeping it holy. Honour your father and your mother. You shall not murder. You shall not commit adultery. You shall not steal. You shall not give false testimony. You shall not covet.</p>
                         
@@ -380,11 +510,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="9">
                     
                         <h2 class="number">Q9</h2>
                         
                         <p class="question">What does God require in the first, second, and third commandments?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">First, that we know God as the only true God. Second, that we avoid all idolatry. Third, that we treat God's name with fear and reverence.</p>
                         
@@ -398,17 +530,19 @@
             
             <div class="row-container">
             
-                         <div class="outer-square">
+                <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="10">
                         
                         <h2 class="number">Q10</h2>
                         
                         <p class="question">What does God require in the fourth and fifth commandments?</p>
                         
+                        <div class="triangledown"></div>
+                        
                         <p class="answer">Fourth, that on the Sabbath day we spend time in worship of God. Fifth, that we love and honour our father and our mother.</p>
                         
-                        <a class="verse" href="https://www.biblegateway.com/passa   ge/?search=leviticus+19%3A3&version=NIV" target="_blank">Leviticus 19:3</a>
+                        <a class="verse" href="https://www.biblegateway.com/passage/?search=Leviticus+19%3A3&version=NIV" target="_blank">Leviticus 19:3</a>
                     
                     </div>
             
@@ -416,11 +550,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="11">
                     
                         <h2 class="number">Q11</h2>
                         
                         <p class="question">What does God require in the sixth, seventh, and eighth commandments?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Sixth, that we do not hurt or hate our neighbour. Seventh, that we live purely and faithfully. Eighth, that we do not take without permission that which belongs to someone else.</p>
                         
@@ -432,11 +568,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="12">
                     
                         <h2 class="number">Q12</h2>
                         
                         <p class="question">What does God require in the ninth and tenth commandments?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Ninth, that we do not lie or deceive. Tenth, that we are content, not envying anyone.</p>
                         
@@ -454,11 +592,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="13">
                         
                         <h2 class="number">Q13</h2>
                         
                         <p class="question">Can anyone keep the law of God perfectly?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Since the fall, no human has been able to keep the law of God perfectly.</p>
                         
@@ -470,15 +610,17 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="14">
                     
                         <h2 class="number">Q14</h2>
                         
                         <p class="question">Did God create us unable to keep his law?</p>
                         
+                        <div class="triangledown"></div>
+                        
                         <p class="answer">No, but because of the disobedience of Adam and Eve we are all born in sin and guilt, unable to keep God's law.</p>
                         
-                        <a class="verse" href="https://www.biblegateway.com/passage/?search=romans+5%3A12&version=NIV" target="_blank">Romas 5:12</a>
+                        <a class="verse" href="https://www.biblegateway.com/passage/?search=romans+5%3A12&version=NIV" target="_blank">Romans 5:12</a>
                     
                     </div>
             
@@ -486,11 +628,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="15">
                     
                         <h2 class="number">Q15</h2>
                         
                         <p class="question">Since no one can keep the law, what is its purpose?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">That we may know the holy nature of God, and the sinful nature of our hearts; and thus our need of a Saviour.</p>
                         
@@ -504,13 +648,15 @@
             
             <div class="row-container">
             
-                         <div class="outer-square">
+                <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="16">
                         
                         <h2 class="number">Q16</h2>
                         
                         <p class="question">What is sin?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Sin is rejecting or ignoring God in the world he created, not being or doing what he requires in his law.</p>
                         
@@ -522,11 +668,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="17">
                     
                         <h2 class="number">Q17</h2>
                         
                         <p class="question">What is idolatry?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Idolatry is trusting in created things rather than the Creator.</p>
                         
@@ -539,11 +687,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="18">
                     
                         <h2 class="number">Q18</h2>
                         
                         <p class="question">Will God allow our disobedience and idolatry to go unpunished?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">No, God is righteously angry with our sins and will punish them both in this life, and in the life to come.</p>
                         
@@ -561,11 +711,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="19">
                         
                         <h2 class="number">Q19</h2>
                         
                         <p class="question">Is there any way to escape punishment and be brought back into God's favour?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Yes, God reconciles us to himself by a Redeemer.</p>
                         
@@ -574,14 +726,16 @@
                     </div>
             
                 </div>
-                
+            
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="20">
                     
                         <h2 class="number">Q20</h2>
                         
                         <p class="question">Who is the Redeemer?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">The only Redeemer is the Lord Jesus Christ.</p>
                         
@@ -593,11 +747,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="21">
                     
                         <h2 class="number">Q21</h2>
                         
                         <p class="question">What sort of Redeemer is needed to bring us back to God?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">One who is truly human and also truly God.</p>
                         
@@ -611,13 +767,15 @@
             
             <div class="row-container">
             
-                         <div class="outer-square">
+                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="22">
                         
                         <h2 class="number">Q22</h2>
                         
                         <p class="question">Why must the Redeemer be truly human?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">That in human nature he might on our behalf perfectly obey the whole law and suffer the punishment for human sin.</p>
                         
@@ -629,11 +787,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="23">
                     
                         <h2 class="number">Q23</h2>
                         
                         <p class="question">Why must the Redeemer be truly God?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">That because of his divine nature his obediences and suffering would be perfect and effective.</p>
                         
@@ -645,11 +805,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="24">
                     
                         <h2 class="number">Q24</h2>
                         
-                        <p class="question">Why was is necessary for Christ, the Redeemer, to die?</p>
+                        <p class="question">Why was it necessary for Christ, the Redeemer, to die?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Christ died willing in our place to deliver us from the power and penalty of sin and bring us back to God.</p>
                         
@@ -667,11 +829,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="25">
                         
                         <h2 class="number">Q25</h2>
                         
                         <p class="question">Does Christ's death mean all our sins can be forgiven?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Yes, because Christ's death on the cross fully paid the penalty for our sin, God will remember our sins no more.</p>
                         
@@ -683,11 +847,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="26">
                     
                         <h2 class="number">Q26</h2>
                         
                         <p class="question">What else does Christ's death redeem?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Evey part of fallen creation.</p>
                         
@@ -699,11 +865,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="27">
                     
                         <h2 class="number">Q27</h2>
                         
                         <p class="question">Are all people, just as they were lost through Adam, saved through Christ?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">No, only those who are elected by God and united to Christ by faith.</p>
                         
@@ -719,15 +887,17 @@
             
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="28">
                         
                         <h2 class="number">Q28</h2>
                         
                         <p class="question">What happens after death to those not united to Christ by faith?</p>
                         
+                        <div class="triangledown"></div>
+                        
                         <p class="answer">They will be cast out from the presence of God, into hell, to be justly punished forever.</p>
                         
-                        <a class="verse" href="https://www.biblegateway.com/passage/?search=john+3%3A16-18&version=NIV" target="_blank">John 3:16-18 </a><span class="verse">and </span><a class="verse" href="https://www.biblegateway.com/passage/?search=john+3%3A36&version=NIV" target="_blank"> 36 </a>
+                        <a class="verse" href="https://www.biblegateway.com/passage/?search=john+3%3A16-18&version=NIV" target="_blank">John 3:16-18 </a><span class="verse">and </span><a class="verse" href="https://www.biblegateway.com/passage/?search=john+3%3A36&version=NIV" target="_blank">36</a>
                         
                     </div>
             
@@ -735,11 +905,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="29">
                     
                         <h2 class="number">Q29</h2>
                         
                         <p class="question">How can we be saved?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Only by faith in Jesus Christ and in his substitutionary atoning death on the cross.</p>
                         
@@ -751,11 +923,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="30">
                     
                         <h2 class="number">Q30</h2>
                         
                         <p class="question">What is faith in Jesus Christ?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Receiving and resting on him alone for salvation as he is offered to us in the gospel.</p>
                         
@@ -773,11 +947,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="31">
                         
                         <h2 class="number">Q31</h2>
                         
                         <p class="question">What do we believe by true faith?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">We believe in God the Father Almight, Maker of heaven andearth; and in Jesus Christ his only Son our Lord, who was conceived by the Holy Spirit, born of the virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried. He descended into hell. The third day he rose again from the dead. Heascended into heaven, and is seated at the right hand of God the Father Almighty; from there he will come to judge the living and the dead. We belive in the Holy Spirit, the communion of saints, the forgiveness of sins, the resurrection of the body, and the life everlasting.</p>
                         
@@ -789,11 +965,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="32">
                     
                         <h2 class="number">Q32</h2>
                         
                         <p class="question">What do justification and sanctification mean?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Justification means our declared righteousness before God. Santification means our gradual, growing righteousness.</p>
                         
@@ -805,11 +983,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="33">
                     
                         <h2 class="number">Q33</h2>
                         
                         <p class="question">Should those who have faith in Christ seek their salvation through their own works, or anywhere else?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">No, everything necessary to salvation is found Christ.</p>
                         
@@ -823,13 +1003,15 @@
             
             <div class="row-container">
             
-                         <div class="outer-square">
+                <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="34">
                         
                         <h2 class="number">Q34</h2>
                         
                         <p class="question">Since we are redeemed by grace alone, through Christ alone, must we still do good works and obey Gods word?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Yes, so that our lives may show love and gratitude to God; and so that by our godly behaviour others may be won to Christ.</p>
                         
@@ -841,11 +1023,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="35">
                     
                         <h2 class="number">Q35</h2>
                         
                         <p class="question">Since we are redeemed by grace alone, through faith alone, where does this faith come from?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">From the Holy Spirit.</p>
                         
@@ -857,11 +1041,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="36">
                     
                         <h2 class="number">Q36</h2>
                         
                         <p class="question">What do we believe about the Holy Spirit?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">That he is God, coeternal with the Father and the Son.</p>
                         
@@ -879,11 +1065,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="37">
                         
                         <h2 class="number">Q37</h2>
                         
                         <p class="question">How does the Holy Spirit help us?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">The Holy Spirit convicts us of our sin, and he enables us to pray and to understand God's Word.</p>
                         
@@ -895,11 +1083,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="38">
                     
                         <h2 class="number">Q38</h2>
                         
                         <p class="question">What is prayer?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Prayer is pouring out our hearts to God.</p>
                         
@@ -911,11 +1101,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="39">
                     
                         <h2 class="number">Q39</h2>
                         
                         <p class="question">With what attitude should we pray?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">With love, perseverance, and gratefulness.</p>
                         
@@ -931,11 +1123,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="40">
                         
                         <h2 class="number">Q40</h2>
                         
                         <p class="question">What should we pray?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">The whole Word of God directs us in what we should pray.</p>
                         
@@ -947,11 +1141,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="41">
                     
                         <h2 class="number">Q41</h2>
                         
                         <p class="question">What is the Lord's Prayer?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Our Father in heaven, hallowed be your name, your kingdom come, you will be done, on earth as it is in heaven. Give us today our daily bread. And forgive us our debts, as we also have forgiven our debtors. And lead us not into temptation, bue deliver us from evil.</p>
                         
@@ -963,11 +1159,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="42">
                     
                         <h2 class="number">Q42</h2>
                         
                         <p class="question">How is the Word of God to be read and heard?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">With diligence, preparation, and prayer; so tha we may accept it with faith and practice it in our lives.</p>
                         
@@ -985,11 +1183,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="43">
                         
                         <h2 class="number">Q43</h2>
                         
                         <p class="question">What are the sacraments or ordinances?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Baptism and the Lord's Supper.</p>
                         
@@ -1003,11 +1203,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="44">
                     
                         <h2 class="number">Q44</h2>
                         
                         <p class="question">What is baptism?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Baptism is the wahsing with water in the name of the Father, the Son, and the Holy Spirit.</p>
                         
@@ -1019,11 +1221,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="45">
                     
                         <h2 class="number">Q45</h2>
                         
                         <p class="question">Is baptism with water the washing away of sin itself?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">No, only the blodd of Christ can cleanse us from sin.</p>
                         
@@ -1037,13 +1241,15 @@
             
             <div class="row-container">
                 
-            <div class="outer-square">
+                <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="46">
                         
                         <h2 class="number">Q46</h2>
                         
                         <p class="question">What is the Lord's Supper?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Christ commanded all Christians to eat bread and to drink from the cup in thankful remembrance of him.</p>
                         
@@ -1055,11 +1261,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="47">
                     
                         <h2 class="number">Q47</h2>
                         
                         <p class="question">Does the Lord's Supper add anything to Christ's atoning work?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">No, Christ died once for all.</p>
                         
@@ -1071,11 +1279,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="48">
                     
                         <h2 class="number">Q48</h2>
                         
                         <p class="question">What is the church?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">A community elected for eternal life and united by faith, who love, follow, learn from, and worship God together.</p>
                         
@@ -1094,11 +1304,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="49">
                         
                         <h2 class="number">Q49</h2>
                         
                         <p class="question">Where is Christ now?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Christ rose bodily from the grave on the third day after his death and is seated at the right hand of the Father.</p>
                         
@@ -1110,11 +1322,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="50">
                     
                         <h2 class="number">Q50</h2>
                         
                         <p class="question">What does Christ's resurrection mean for us?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Christ triumphed over sin and death so that all who trust in him are raised to new life in this word and to everlasting life in the world to come.</p>
                         
@@ -1126,11 +1340,13 @@
                 
                 <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="51">
                     
                         <h2 class="number">Q51</h2>
                         
                         <p class="question">Of what advantage to us is Christ's ascension?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">Christ is now advocating for us in the presence of his Father and also sends us his Spirit.</p>
                         
@@ -1144,13 +1360,15 @@
             
             <div class="row-container">
                 
-            <div class="outer-square">
+                <div class="outer-square">
             
-                    <div class="inner-square">
+                    <div class="inner-square" id="52">
                         
                         <h2 class="number">Q52</h2>
                         
                         <p class="question">What hope does everlasting life hold for us?</p>
+                        
+                        <div class="triangledown"></div>
                         
                         <p class="answer">That we will live with and enjoy God forever in the new heaven and the new earth, where we will be forever fred from all sin in a renewed, restored creation.</p>
                         
@@ -1178,8 +1396,6 @@
                 
                 <div id="news">
                 
-                    
-                
                 </div>
                 
             </div>
@@ -1192,16 +1408,53 @@
         
         $("#show-hide").click(function(){
             
-            $(".answer").fadeToggle(1500);
+            $(".answer").fadeToggle(1000);
             
         })
         
-        $(".inner-square").click(function() {
+        $(".triangledown").click(function() {
             
-           $(this).children(".answer").fadeToggle(1500);  
+            $(this).toggleClass("triangleup");
+            
+            $(this).siblings(".answer").toggle(); 
+            
+        });
+            
+        $("#random-all").click(function() {
+            
+            var randomQuestion = 1 + (Math.floor(Math.random() * 52));
+            
+            $("#inner-square-random").html($("#" + randomQuestion).html());
             
         });
     
+       
+       $("#random-part-1").click(function() {
+            
+            var randomQuestion = 1 + (Math.floor(Math.random() * 20));
+            
+            $("#inner-square-random").html($("#" + randomQuestion).html());
+            
+        });
+       
+       $("#random-part-2").click(function() {
+            
+            var randomQuestion = Math.floor(Math.random() * (35 - 21 + 1)) + 21;
+            
+            $("#inner-square-random").html($("#" + randomQuestion).html());
+            
+        });
+       
+       $("#random-part-3").click(function() {
+            
+            var randomQuestion = Math.floor(Math.random() * (52 - 36 + 1)) + 36;
+            
+            $("#inner-square-random").html($("#" + randomQuestion).html());
+            
+        });
+       
+        
+        
     </script>    
     
     
