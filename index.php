@@ -1,1 +1,1 @@
-<?php header( 'Location: /nc-catechism.html' ) ;  ?>
+<?php header( 'Location: /index.html' ) ;  ?>
