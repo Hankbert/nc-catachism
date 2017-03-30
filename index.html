@@ -100,6 +100,78 @@
                 
             }
             
+            #tab-container {
+                
+                border:2px solid #BB1919;
+                width:220px;
+                left:-2px;
+                height:42px;
+                position:fixed;
+                background-color:#BB1919;
+                border-bottom-right-radius: 10px;
+                border-top-right-radius: 10px;
+                
+            }
+            
+            #assessment-tab {
+                
+                position:fixed;
+                left:0px;
+                top:362px;
+                height:26px;
+                width:170px;
+                background-color: #BB1919;
+                padding-top: 6px;
+                margin-left:10px;
+                color:white;
+                font-weight:bold;
+                font-size:20px;
+                colo:white;
+                padding-left: 1
+            
+            }
+            
+            #tab-container:hover {
+                
+                border:2px solid white;
+                
+            }
+            
+            .tab-triangledown {
+                
+                margin-top: -11px;
+                margin-left: 20px;
+                border-right: 3px solid white; 
+                border-bottom: 3px solid white;
+                width: 15px; height: 15px;
+                transform: rotate(-315deg);
+                margin-bottom: 25px;
+                position: fixed;
+                left:165px;
+                top:376px;
+                
+            }
+            
+            .tab-triangleup {
+                
+                margin-top: -1px;
+                margin-left: 20px;
+                border-right: 3px solid white; 
+                border-bottom: 3px solid white;
+                width: 15px; height: 15px;
+                transform: rotate(-135deg);
+                margin-bottom: 25px;
+                position: fixed;
+                left:165px;
+                top:376px;
+                
+            }
+            
+            #assessment-row {
+                
+                display:none;
+            }
+            
             .outer-square-random {
                 
                 height:320px;
@@ -177,7 +249,6 @@
                 height:435px;
                 float:left;
                 border: 1px gray solid;
-                
                 
             } 
             
@@ -307,7 +378,15 @@
                  
         <div id="page-container">
             
-            <div class="row-container">
+            <div id="tab-container">
+                
+                <div id="assessment-tab">Self-Assessment</div>
+            
+                <div class="tab-triangledown"></div>
+                
+            </div>
+            
+            <div class="row-container" id="assessment-row">
             
                 <div class="outer-square-random">
                     
@@ -1411,6 +1490,16 @@
             $(".answer").fadeToggle(1000);
             
         })
+        
+        $(".tab-triangledown").click(function() {
+            
+            $(this).toggleClass("tab-triangleup");
+            
+            $(this).parent().siblings("#assessment-row").toggle("slide");
+            
+            $(window).scrollTop(0);
+            
+        });
         
         $(".triangledown").click(function() {
             
