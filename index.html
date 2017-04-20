@@ -108,10 +108,19 @@
                 
             }
             
-            #show-hide:hover {
+            #show:hover {
                 
-                text-decoration: underline;
+                background-color:#BB4545;
+                border-radius: 3px;
                 
+            }
+            
+            #hide {
+                
+                width:168px;
+                background-color:#BB4545;
+                border-radius: 3px;
+                display:none;
             }
             
             #page-container {
@@ -350,7 +359,9 @@
             
             <div id="redmenu-bar">
             
-                <div id="show-hide" class="menu-item">Show/Hide All Answers</div>
+                <div id="show" class="menu-item">Show All Answers</div>
+                
+                <div id="hide" class="menu-item">Hide All Answers</div>
                 
                 <a id="1" class="menu-item" href="#part1">Part 1 - Q1-Q20</a>
                 
@@ -1513,13 +1524,33 @@
         
     <script type="text/javascript">
         
-        $("#show-hide").click(function(){
+        $("#show").click(function(){
+                   
+            $(".triangleup").click();
             
-            $(".answer").fadeToggle(1000);
+            $(".triangledown").hide();
             
-            $(".triangledown").toggleClass("triangleup");
+            $(".answer").show();
             
-        })
+            $("#show").hide();
+            
+            $("#hide").show();
+            
+        });
+        
+        $("#hide").click(function(){
+            
+       
+            
+            $(".triangledown").show();
+            
+            $(".answer").hide();
+            
+            $("#show").show();
+            
+            $("#hide").hide();
+            
+        });
         
         $(".assessment-down").click(function() {
             
